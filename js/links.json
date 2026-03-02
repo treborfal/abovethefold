@@ -1,0 +1,91 @@
+{ 
+   "secondaryLinks":[
+ 	  {
+		  "linkTitle":"There Is No Fold",
+          "linkURL":"https://www.lukew.com/ff/entry.asp?1946",
+          "linkSource":"lukew.com"
+      },
+ 	  {
+		  "linkTitle":"As the Page Scrolls",
+          "linkURL":"https://articles.uie.com/page_scrolling/",
+          "linkSource":"articles.uie.com"
+      },
+ 	  {
+		  "linkTitle":"Scrolling and Attention",
+          "linkURL":"https://www.nngroup.com/articles/scrolling-and-attention/",
+          "linkSource":"nngroup.com"
+      },
+ 	  {
+		  "linkTitle":"The myth of the page fold: evidence from user testing",
+          "linkURL":"https://www.cxpartners.co.uk/our-thinking/the_myth_of_the_page_fold_evidence_from_user_testing/",
+          "linkSource":"cxpartners.co.uk"
+      },
+ 	  {
+		  "linkTitle":"Blasting the Myth of the Fold",
+          "linkURL":"http://boxesandarrows.com/blasting-the-myth-of-the-fold/",
+          "linkSource":"boxesandarrows.com"
+      },
+ 	  {
+		  "linkTitle":"Unfolding the insights into webpage scroll",
+          "linkURL":"https://www.clicktale.com/resources/blog/resourcesbloginvest-in-customer-experience-software/",
+          "linkSource":"clicktale.com"
+      },
+ 	  {
+		  "linkTitle":"The above the fold myth",
+          "linkURL":"https://medium.com/rareview/the-above-the-fold-myth-f0f93b1b9875",
+          "linkSource":"medium.com/rareview"
+      },
+ 	  {
+		  "linkTitle":"The Extinction of the Scrollbar",
+          "linkURL":"http://uxmag.com/articles/the-extinction-of-the-scrollbar",
+          "linkSource":"uxmag.com"
+      },
+ 	  {
+		  "linkTitle":"Scroll Behavior Across the Web",
+          "linkURL":"http://blog.chartbeat.com/2013/08/12/scroll-behavior-across-the-web/",
+          "linkSource":"blog.chartbeat.com"
+      },
+ 	  {
+		  "linkTitle":"Myth: People Don't Scroll",
+          "linkURL":"http://uxmyths.com/post/654047943/myth-people-dont-scroll",
+          "linkSource":"uxmyths.com"
+      },
+ 	  {
+		  "linkTitle":"Life Below 600px",
+          "linkURL":"http://iampaddy.com/lifebelow600/",
+          "linkSource":"iampaddy.com"
+      },
+ 	  {
+		  "linkTitle":"Designing ‘Above the Fold’ Necessary?",
+          "linkURL":"http://www.practicalecommerce.com/articles/3108-Designing-Above-the-Fold-Necessary",
+          "linkSource":"practicalecommerce.com"
+      },
+ 	  {
+		  "linkTitle":"Love your scrollbar",
+          "linkURL":"http://thereisnopagefold.com/",
+          "linkSource":"thereisnopagefold.com"
+      },
+ 	  {
+		  "linkTitle":"The Fold™ is Dead (Long Live The Fold!)",
+          "linkURL":"https://www.linkedin.com/pulse/20141106045300-4688016-the-fold-is-dead-long-live-the-fold/",
+          "linkSource":"linkedin.com"
+      },
+      {
+        "linkTitle":"Above the Fold vs. Below the Fold: Does it Still Matter in 2023?",
+        "linkURL":"https://www.abtasty.com/blog/above-the-fold/",
+        "linkSource":"abtasty.com"
+    },
+    {
+        "linkTitle":"Above the Fold: Best Practices for Your Website",
+        "linkURL":"https://www.semrush.com/blog/above-the-fold/",
+        "linkSource":"semrush.com"
+    },
+    {
+        "linkTitle":"18 Above the Fold Content Examples to Inspire Your Own",
+        "linkURL":"https://blog.hubspot.com/marketing/above-the-fold",
+        "linkSource":"blog.hubspot.com"
+    }
+ 	  	 
+    	  
+   ]
+}
