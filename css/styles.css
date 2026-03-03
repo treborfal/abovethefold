@@ -9,6 +9,8 @@
 	/* Text */
 	--color-text: #fff;
 	--color-link-hover: #000;
+	--color-selection-bg: #000;
+	--color-selection-text: #fff;
 
 	/* Accent */
 	--color-accent: #2b00f7;
@@ -37,9 +39,9 @@ body, html {
 
 
 ::-moz-selection {
-	background: var(--color-link-hover);
+	background: var(--color-selection-bg);
 	text-shadow: none;
-	color: var(--color-text);
+	color: var(--color-selection-text);
 }
 p {
 	margin: 0 0 1em;
@@ -50,9 +52,9 @@ p {
 	box-sizing: border-box;
 }
 ::selection {
-	background: var(--color-link-hover);
+	background: var(--color-selection-bg);
 	text-shadow: none;
-	color: var(--color-text);
+	color: var(--color-selection-text);
 }
 
 
@@ -287,6 +289,8 @@ a:hover {
 		--color-accent: #00E5E5;
 		--color-link: #00E5E5;
 		--color-link-hover: #ffffff;
+		--color-selection-bg: #00E5E5;
+		--color-selection-text: #291F33;
 		--color-fold-bg: #00E5E5;
 		--color-border-strong: #00E5E5;
 	}
