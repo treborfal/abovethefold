@@ -255,7 +255,7 @@ a:hover {
 .share-button {
 	background: transparent;
 	border: 0;
-	color: #2b00f7;
+	color: var(--color-link);
 	cursor: pointer;
 	font: inherit;
 	padding: 0;
@@ -263,7 +263,7 @@ a:hover {
 }
 
 .share-button:hover {
-	color: #000;
+	color: var(--color-link-hover);
 }
 
 .share-button:focus-visible {
