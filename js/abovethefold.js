@@ -47,27 +47,3 @@ function hasScrolled() {
     lastScrollTop = st;
 }
 
-
-// change colours on refresh
-
-//var colors = ['#FFAFA1', '#44d9ff', '#17c37b', '#a6a5b7'];
-
-//var changeBackground = function() {
-//    document.body.style.background = colors[Math.floor(Math.random()*colors.length)];
-//};
-
-//changeBackground();
-
-
-
-//var bgcolorlist = ['#FFAFA1', '#44d9ff', '#17c37b', '#a6a5b7'];
-//var colorlist = ['#fff', '#000', '#999', '#ccc'];
-//
-//$(function() {
-//  var backgroundColor = bgcolorlist[Math.floor(Math.random()*bgcolorlist.length)];
-//  var textColor = colorlist[Math.floor(Math.random()*colorlist.length)];
-//  $('.color-change').css({
-//        background: backgroundColor, 
-//        color: textColor 
-//  });
-//});
