@@ -138,7 +138,7 @@ header {padding: 30px 30px 50px 30px;position:fixed;top:0;left:0;right:0;z-index
 	margin-top: 75vh
 }
 .links-container {
-	border: 1px solid rgba(255, 255, 255, 0.4);
+	border: 5px solid rgba(255, 255, 255, 0.4);
 	padding: 30px 50px;
 	font-size: 200%;
 	margin-top:40px;
