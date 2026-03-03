@@ -250,6 +250,32 @@ a:hover {
 	color: var(--color-link-hover);
 }
 
+.share-button {
+	background: transparent;
+	border: 0;
+	color: #2b00f7;
+	cursor: pointer;
+	font: inherit;
+	padding: 0;
+	text-decoration: underline;
+}
+
+.share-button:hover {
+	color: #000;
+}
+
+.share-button:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}
+
+.share-feedback {
+	display: inline-block;
+	font-size: 0.7em;
+	margin-left: 8px;
+	min-width: 70px;
+}
+
 
 /* ==========================================================================
    DARK MODE
