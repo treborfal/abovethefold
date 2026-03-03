@@ -1,6 +1,23 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 
+:root {
+	/* Surface */
+	--color-bg: #FFAFA1;
+	--color-fold-bg: #2b00f7;
+
+	/* Text */
+	--color-text: #fff;
+	--color-link-hover: #000;
+
+	/* Accent */
+	--color-accent: #2b00f7;
+	--color-link: #2b00f7;
+
+	/* Border */
+	--color-border-strong: #2b00f7;
+}
+
 html {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -8,11 +25,11 @@ html {
 body {
 	margin: 0;
 	font-weight: 500;
-	background-color: #FFAFA1;
+	background-color: var(--color-bg);
 }
 body, html {
 	padding-bottom: 0px;
-	color: #fff;
+	color: var(--color-text);
 	font-family: 'Work Sans', sans-serif;
 	line-height: 1.4;
 	font-size: 100%;
@@ -20,9 +37,9 @@ body, html {
 
 
 ::-moz-selection {
-	background: #000;
+	background: var(--color-link-hover);
 	text-shadow: none;
-	color: #fff;
+	color: var(--color-text);
 }
 p {
 	margin: 0 0 1em;
@@ -33,9 +50,9 @@ p {
 	box-sizing: border-box;
 }
 ::selection {
-	background: #000;
+	background: var(--color-link-hover);
 	text-shadow: none;
-	color: #fff;
+	color: var(--color-text);
 }
 
 
@@ -46,7 +63,7 @@ p {
    ========================================================================== */
 
 .highlight {
-	color: #2b00f7
+	color: var(--color-accent)
 }
 .quote {
 	margin-bottom: 100vh;
@@ -142,9 +159,9 @@ p.link-source {font-size:50%;}
 	bottom: 0;
 	right: 0;
 	text-align: right;
-	color: #fff;
+	color: var(--color-text);
 	margin: 0 20px 40px 0;
-	background-color: #2b00f7;
+	background-color: var(--color-fold-bg);
 	padding: 5px 10px;
 	font-size:1.6em;
 }
@@ -156,11 +173,11 @@ p.link-source {font-size:50%;}
 	margin-bottom: 5px
 }
 
-a.btn     {background: #2b00f7;
+a.btn     {background: var(--color-accent);
     display: inline-block;
     padding: 10px 30px;
     text-decoration: none;
-    color: #ffffff;
+    color: var(--color-text);
     font-size: 0.6em;
 }
 
@@ -177,8 +194,8 @@ p.advert-sub-text {
 }
 hr {
 	border: none;
-	border-top: 10px dashed #2b00f7;
-	color: #fff;
+	border-top: 10px dashed var(--color-border-strong);
+	color: var(--color-text);
 	background-color: none;
 	height: 1px;
 	width: 100%;
@@ -219,7 +236,7 @@ h6 {
 	padding: 20px 0
 }
 a {
-	color: #2b00f7;
+	color: var(--color-link);
 	-moz-transition: all 0.23s ease-in;
 	-o-transition: all 0.23s ease-in;
 	-webkit-transition: all 0.23s ease-in;
@@ -230,7 +247,7 @@ a {
 
 
 a:hover {
-	color: #000;
+	color: var(--color-link-hover);
 }
 
 
@@ -238,13 +255,15 @@ a:hover {
    DARK MODE
    ========================================================================== */
 @media (prefers-color-scheme: dark) {
-	
-	body {background-color: #291F33;}
-	.highlight, a {color: #00E5E5}
-	a:hover {color:#ffffff;}
-	.fold-text p {background-color: #00E5E5;}
-	a.btn     {background: #00E5E5;}
-	hr {border-top: 10px dashed #00E5E5;}
+	:root {
+		--color-bg: #291F33;
+		--color-text: #fff;
+		--color-accent: #00E5E5;
+		--color-link: #00E5E5;
+		--color-link-hover: #ffffff;
+		--color-fold-bg: #00E5E5;
+		--color-border-strong: #00E5E5;
+	}
 }
 
 
@@ -253,7 +272,7 @@ a:hover {
    ========================================================================== */
 .linethrough {
 	text-decoration: line-through;
-	color: #000
+	color: var(--color-link-hover)
 }
 .round {
 	-webkit-border-radius: 50%;
