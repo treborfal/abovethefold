@@ -138,10 +138,11 @@ header {padding: 30px 30px 50px 30px;position:fixed;top:0;left:0;right:0;z-index
 	margin-top: 75vh
 }
 .links-container {
-	border: 5px solid rgba(255, 255, 255, 0.4);
+	border: 1px solid rgba(255, 255, 255, 0.4);
 	padding: 30px 50px;
 	font-size: 200%;
 	margin-top:40px;
+	border-radius:8px;
 }
 
 p.link-title {margin-bottom:6px;}
@@ -208,6 +209,7 @@ p.link-source {font-size:50%;}
 	background-color: var(--color-fold-bg);
 	padding: 5px 10px;
 	font-size:1.6em;
+	border-radius:8px;
 }
 .colophon {
 	margin: 60px 0 30px;
