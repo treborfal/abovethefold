@@ -48,25 +48,55 @@
 	<link href="favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
 	<link href="favicons/manifest.json" rel="manifest">
 	<link href="favicons/safari-pinned-tab.svg" rel="mask-icon">
-	<meta content="#bea1a5" name="theme-color">
-	<title>Above the fold is a myth.</title>
-	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500,800" rel="stylesheet">
-	<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet"><!-- Legacy IE8 conditional assets removed; this site targets modern browsers. -->
-</head>
+		<meta content="#bea1a5" name="theme-color">
+		<title>Above the fold is a myth.</title>
+		<script>
+			(function () {
+				var savedTheme = localStorage.getItem('theme-preference');
+				if (savedTheme === 'light' || savedTheme === 'dark') {
+					document.documentElement.setAttribute('data-theme', savedTheme);
+				}
+			})();
+		</script>
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans:500,800" rel="stylesheet">
+		<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet"><!-- Legacy IE8 conditional assets removed; this site targets modern browsers. -->
+	</head>
 <body>
 	<div class="fold-text">
 		<p>&darr; The Fold &darr;</p>
 	</div>
 	<hr class="thefold">
-	<div class="container">
-		<header>
-			<p>
-				abovethefold.fyi —
-				<button class="share-button" id="share-button" type="button">Share</button>
-				<span aria-live="polite" class="share-feedback" id="share-feedback"></span>
-			</p>
-		</header>
+		<div class="container">
+			<header>
+				<div class="header-row">
+					<p>
+						abovethefold.fyi —
+						<button class="share-button" id="share-button" type="button">Share</button>
+						<span aria-live="polite" class="share-feedback" id="share-feedback"></span>
+					</p>
+					<div aria-label="Theme switcher" class="theme-toggle" role="group">
+						<button aria-label="Switch to light theme" class="theme-button" data-theme-option="light" type="button">
+							<svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="18">
+								<circle cx="12" cy="12" r="4"></circle>
+								<path d="M12 2v2"></path>
+								<path d="M12 20v2"></path>
+								<path d="m4.93 4.93 1.41 1.41"></path>
+								<path d="m17.66 17.66 1.41 1.41"></path>
+								<path d="M2 12h2"></path>
+								<path d="M20 12h2"></path>
+								<path d="m6.34 17.66-1.41 1.41"></path>
+								<path d="m19.07 4.93-1.41 1.41"></path>
+							</svg>
+						</button>
+						<button aria-label="Switch to dark theme" class="theme-button" data-theme-option="dark" type="button">
+							<svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="18">
+								<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</header>
 		
 		<div class="content">
 			<h1 class="heading">Above the fold is a <span class="highlight">myth.</span></h1>
@@ -108,8 +138,9 @@
 			</div><!-- / colophon -->
 		</div><!-- / content -->
 	</div><!--/ container -->
-<script src="js/abovethefold.js"></script>
-<script src="js/share.js"></script>
+	<script src="js/theme-toggle.js"></script>
+	<script src="js/abovethefold.js"></script>
+	<script src="js/share.js"></script>
 
 	<script src="js/links-renderer.js"></script>
 		<script>

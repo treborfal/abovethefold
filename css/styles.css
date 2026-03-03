@@ -75,13 +75,63 @@ p {
 }
 
 
-header {padding: 30px 30px 50px 30px;position:fixed;top:0;z-index:99999999999;
+header {padding: 30px 30px 50px 30px;position:fixed;top:0;left:0;right:0;z-index:99999999999;
 		height:74px;
 	    transition: top 0.2s ease-in-out;}
 	
 	.nav-up {
 	    top: -74px;
 	}
+
+
+.header-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+}
+
+.header-row p {
+	margin: 0;
+}
+
+.theme-toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.theme-button {
+	background: transparent;
+	border: 0;
+	color: var(--color-link);
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 28px;
+	width: 28px;
+	padding: 0;
+	opacity: 0.7;
+	border-radius: 50%;
+	transition: opacity 0.2s ease-in-out;
+}
+
+.theme-button:hover {
+	opacity: 1;
+	color: var(--color-link-hover);
+}
+
+.theme-button[aria-pressed="true"] {
+	opacity: 1;
+	outline: 1px solid currentColor;
+	outline-offset: 2px;
+}
+
+.theme-button:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}
 
 .content {
 	padding: 0 30px 50px 30px;
@@ -274,8 +324,20 @@ a:hover {
 /* ==========================================================================
    DARK MODE
    ========================================================================== */
+:root[data-theme="dark"] {
+		--color-bg: #291F33;
+		--color-text: #fff;
+		--color-accent: #00E5E5;
+		--color-link: #00E5E5;
+		--color-link-hover: #ffffff;
+		--color-selection-bg: #00E5E5;
+		--color-selection-text: #291F33;
+		--color-fold-bg: #00E5E5;
+		--color-border-strong: #00E5E5;
+}
+
 @media (prefers-color-scheme: dark) {
-	:root {
+	:root:not([data-theme]) {
 		--color-bg: #291F33;
 		--color-text: #fff;
 		--color-accent: #00E5E5;
@@ -361,6 +423,13 @@ a:hover {
 
 @media only screen and (max-width:767px) {
 	header {padding: 20px 20px 20px;}
+	.header-row {
+		gap: 10px;
+	}
+
+	.theme-toggle {
+		gap: 4px;
+	}
 	.content {
 		padding: 0 20px 20px;margin-top: 80vh
 	}
