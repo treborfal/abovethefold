@@ -99,3 +99,64 @@ test('loadSecondaryLinks consumes fetch response and renders links', async () =>
   const sourceParagraph = container.children[0].children[1];
   assert.equal(sourceParagraph.textContent, 'nngroup.com');
 });
+
+test('renderSecondaryLinks skips invalid links and returns appended count', () => {
+  const container = new FakeElement('div');
+  const documentRef = new FakeDocument(container);
+  const originalWarn = console.warn;
+  const warnings = [];
+  console.warn = (message) => warnings.push(message);
+
+  try {
+    const count = linksRenderer.renderSecondaryLinks(
+      container,
+      [
+        {
+          linkTitle: 'Valid link',
+          linkURL: 'https://example.com',
+          linkSource: 'example.com'
+        },
+        {
+          linkURL: 'https://missing-title.com',
+          linkSource: 'bad'
+        },
+        {
+          linkTitle: 'Missing URL',
+          linkSource: 'bad'
+        },
+        {
+          linkTitle: '',
+          linkURL: 'https://empty-title.com',
+          linkSource: 'bad'
+        }
+      ],
+      documentRef
+    );
+
+    assert.equal(count, 1);
+    assert.equal(container.childElementCount, 1);
+    assert.equal(warnings.length, 3);
+  } finally {
+    console.warn = originalWarn;
+  }
+});
+
+test('renderSecondaryLinks applies empty source fallback when linkSource is missing', () => {
+  const container = new FakeElement('div');
+  const documentRef = new FakeDocument(container);
+
+  const count = linksRenderer.renderSecondaryLinks(
+    container,
+    [
+      {
+        linkTitle: 'No source link',
+        linkURL: 'https://example.com/no-source'
+      }
+    ],
+    documentRef
+  );
+
+  assert.equal(count, 1);
+  const sourceParagraph = container.children[0].children[1];
+  assert.equal(sourceParagraph.textContent, '');
+});
