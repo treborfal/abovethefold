@@ -19,12 +19,31 @@
 
     var sourceParagraph = documentRef.createElement('p');
     sourceParagraph.className = 'link-source';
-    sourceParagraph.textContent = link.linkSource;
+    sourceParagraph.textContent = typeof link.linkSource === 'string' ? link.linkSource : '';
 
     linkItem.appendChild(titleParagraph);
     linkItem.appendChild(sourceParagraph);
 
     return linkItem;
+  }
+
+  function isRenderableLink(link) {
+    return (
+      link &&
+      typeof link.linkTitle === 'string' &&
+      link.linkTitle.length > 0 &&
+      typeof link.linkURL === 'string' &&
+      link.linkURL.length > 0
+    );
+  }
+
+  function shouldWarnForSkippedLinks() {
+    return (
+      typeof global.process !== 'undefined' &&
+      global.process &&
+      global.process.env &&
+      global.process.env.NODE_ENV !== 'production'
+    );
   }
 
   function renderSecondaryLinks(container, links, documentRef) {
@@ -35,11 +54,21 @@
     var safeLinks = Array.isArray(links) ? links : [];
     var doc = documentRef || global.document;
 
-    safeLinks.forEach(function (link) {
+    var appendedCount = 0;
+
+    safeLinks.forEach(function (link, index) {
+      if (!isRenderableLink(link)) {
+        if (shouldWarnForSkippedLinks() && global.console && typeof global.console.warn === 'function') {
+          global.console.warn('Skipping invalid secondary link at index ' + index + '.', link);
+        }
+        return;
+      }
+
       container.appendChild(createLinkItem(doc, link));
+      appendedCount += 1;
     });
 
-    return container.childElementCount;
+    return appendedCount;
   }
 
   function loadSecondaryLinks(options) {
