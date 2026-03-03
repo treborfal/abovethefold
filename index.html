@@ -52,11 +52,7 @@
 	<title>Above the fold is a myth.</title>
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500,800" rel="stylesheet">
 	<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet"><!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<link href="css/styles.css" rel="stylesheet"><!-- Legacy IE8 conditional assets removed; this site targets modern browsers. -->
 </head>
 <body>
 	<div id="fb-root"></div>
@@ -139,36 +135,17 @@
 	</div><!--/ container -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
 	</script> 
-	<script>
-	window.jQuery || document.write("<script src='js/vendor/jquery.min.js'><\/script>")
-	</script> 
+
 <script src="js/abovethefold.js"></script>
 	<script src="js/jquery.fittext.js">
 	</script> 
 		
+	<script src="js/links-renderer.js"></script>
 		<script>
-		fetch('js/links.json')
-		  .then(response => response.json())
-		  .then(data => {
-		    const container = document.getElementById('links-list');
-
-		    data.secondaryLinks.forEach(link => {
-		      const linkItem = document.createElement('div');
-		      linkItem.className = 'link';
-
-		      linkItem.innerHTML = `
-		        <p class="link-title">
-		          <a href="${link.linkURL}" target="_blank" title="${link.linkTitle}">
-		            ${link.linkTitle} &rarr;
-		          </a>
-		        </p>
-		        <p class="link-source">${link.linkSource}</p>
-		      `;
-
-		      container.appendChild(linkItem);
-		    });
-		  })
-		  .catch(error => console.error('Error loading JSON:', error));
+		AboveTheFoldLinks.loadSecondaryLinks()
+		  .catch(function (error) {
+		    console.error('Error loading JSON:', error);
+		  });
 		</script>
 		  
 	<script type="text/javascript">

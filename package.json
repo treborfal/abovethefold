@@ -1,0 +1,9 @@
+{
+  "name": "abovethefold",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Tests for abovethefold.fyi",
+  "scripts": {
+    "test": "node --test tests/**/*.test.js"
+  }
+}
