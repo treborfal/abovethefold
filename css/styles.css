@@ -329,7 +329,7 @@ a:hover {
 :root[data-theme="dark"] {
 
 	/* Surface */
-	--color-bg: #c4bebd; #21222a; /* Dark charcoal */
+	--color-bg: #21222a; /* Dark charcoal */
 	--color-fold-bg: #00e5e5; /* Bright green */
 
 	/* Text */
