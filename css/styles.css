@@ -3,21 +3,21 @@
 
 :root {
 	/* Surface */
-	--color-bg: #FFAFA1;
-	--color-fold-bg: #2b00f7;
+	--color-bg: #c4bebd; /* Light grey */
+	--color-fold-bg: #ff2424; /* Burnt orange */
 
 	/* Text */
-	--color-text: #fff;
-	--color-link-hover: #000;
-	--color-selection-bg: #000;
-	--color-selection-text: #fff;
+	--color-text: #21222a; /* Dark charcoal */
+	--color-link-hover: #21222a; /* Dark charcoal */
+	--color-selection-bg: #21222a; /* Dark charcoal */
+	--color-selection-text: #ff2424; /* Burnt orange */
 
 	/* Accent */
-	--color-accent: #2b00f7;
-	--color-link: #2b00f7;
+	--color-accent: #ff2424; /* Burnt orange */
+	--color-link: #ff2424; /* Burnt orange */
 
 	/* Border */
-	--color-border-strong: #2b00f7;
+	--color-border-strong: #ff2424; /* Burnt orange */
 }
 
 html {
@@ -327,28 +327,43 @@ a:hover {
    DARK MODE
    ========================================================================== */
 :root[data-theme="dark"] {
-		--color-bg: #291F33;
-		--color-text: #fff;
-		--color-accent: #00E5E5;
-		--color-link: #00E5E5;
-		--color-link-hover: #ffffff;
-		--color-selection-bg: #00E5E5;
-		--color-selection-text: #291F33;
-		--color-fold-bg: #00E5E5;
-		--color-border-strong: #00E5E5;
+
+	/* Surface */
+	--color-bg: #c4bebd; #21222a; /* Dark charcoal */
+	--color-fold-bg: #00e5e5; /* Bright green */
+
+	/* Text */
+	--color-text: #c4bebd; /* Light grey */
+	--color-link-hover: #c4bebd; /* Light grey */
+	--color-selection-bg: #c4bebd; /* Light grey */
+	--color-selection-text: #00e5e5; /* Bright green */
+
+	/* Accent */
+	--color-accent: #00e5e5; /* Bright green */
+	--color-link: #00e5e5; /* Bright green */
+
+	/* Border */
+	--color-border-strong: #00e5e5; /* Bright green */
 }
 
 @media (prefers-color-scheme: dark) {
 	:root:not([data-theme]) {
-		--color-bg: #291F33;
-		--color-text: #fff;
-		--color-accent: #00E5E5;
-		--color-link: #00E5E5;
-		--color-link-hover: #ffffff;
-		--color-selection-bg: #00E5E5;
-		--color-selection-text: #291F33;
-		--color-fold-bg: #00E5E5;
-		--color-border-strong: #00E5E5;
+		/* Surface */
+	--color-bg: #c4bebd; #21222a; /* Dark charcoal */
+	--color-fold-bg: #00e5e5; /* Bright green */
+
+	/* Text */
+	--color-text: #c4bebd; /* Light grey */
+	--color-link-hover: #c4bebd; /* Light grey */
+	--color-selection-bg: #c4bebd; /* Light grey */
+	--color-selection-text: #00e5e5; /* Bright green */
+
+	/* Accent */
+	--color-accent: #00e5e5; /* Bright green */
+	--color-link: #00e5e5; /* Bright green */
+
+	/* Border */
+	--color-border-strong: #00e5e5; /* Bright green */
 	}
 }
 
