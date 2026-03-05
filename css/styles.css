@@ -70,10 +70,12 @@ p {
 	font-size: 200%
 }
 .heading {
-	font-size: clamp(2rem, 8vw, 7rem);
-	line-height: 1;
+	font-size: clamp(4rem, 18vw, 13.75rem);
+	line-height: 0.92;
 	max-width: 16ch;
 	margin-right: auto;
+	text-wrap: pretty;
+	overflow-wrap: break-word;
 }
 .container {
 	width: 100%;
@@ -267,13 +269,6 @@ h1 {
 	margin-bottom: 4em;
 	font-weight: 800;
 	/*text-shadow: 0.05em 0.05em 0 rgba(0,0,0, 0.1)*/
-}
-
-.heading {
-	font-size: clamp(3rem, 11vw, 7rem);
-	text-wrap: pretty;
-	overflow-wrap: break-word;
-	line-height: 0.95;
 }
 
 @supports (text-wrap: balance) {
@@ -496,6 +491,11 @@ a:hover {
 	
 	.fold-text p {
 		font-size:1.2em;
+	}
+
+	.heading {
+		font-size: clamp(2.75rem, 13vw, 5rem);
+		line-height: 0.94;
 	}
 	
 
