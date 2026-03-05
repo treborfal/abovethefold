@@ -151,23 +151,8 @@
 		<script>
 			(function () {
 				document.getElementById('copyright-year').textContent = new Date().getFullYear();
-
-				var headings = document.querySelectorAll('.heading');
-				var compressor = 0.6;
-
-			function resizeHeading(heading) {
-				heading.style.fontSize = (heading.offsetWidth / (compressor * 10)) + 'px';
-			}
-
-			function resizeAllHeadings() {
-				headings.forEach(resizeHeading);
-			}
-
-			resizeAllHeadings();
-			window.addEventListener('resize', resizeAllHeadings);
-			window.addEventListener('orientationchange', resizeAllHeadings);
-		})();
-	</script>
+			})();
+		</script>
 	
 	<script src="js/ie10-viewport-bug-workaround.js">
 	</script> <!-- analytics -->

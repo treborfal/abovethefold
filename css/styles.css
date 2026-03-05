@@ -262,6 +262,19 @@ h1 {
 	font-weight: 800;
 	/*text-shadow: 0.05em 0.05em 0 rgba(0,0,0, 0.1)*/
 }
+
+.heading {
+	font-size: clamp(2rem, 8vw, 4.5rem);
+	text-wrap: pretty;
+	overflow-wrap: break-word;
+}
+
+@supports (text-wrap: balance) {
+	.heading {
+		text-wrap: balance;
+	}
+}
+
 h2 {
 	font-size: 1em;
 	margin-bottom: 2em;
