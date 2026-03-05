@@ -70,8 +70,8 @@ p {
 	font-size: 200%
 }
 .heading {
-	font-size: clamp(3rem, 11vw, 7rem);
-	line-height: 0.95;
+	font-size: clamp(4rem, 18vw, 13.75rem);
+	line-height: 0.92;
 	max-width: 16ch;
 	margin-right: auto;
 	text-wrap: pretty;
@@ -491,6 +491,11 @@ a:hover {
 	
 	.fold-text p {
 		font-size:1.2em;
+	}
+
+	.heading {
+		font-size: clamp(2.75rem, 13vw, 5rem);
+		line-height: 0.94;
 	}
 	
 
