@@ -69,6 +69,12 @@ p {
 	margin-bottom: 100vh;
 	font-size: 200%
 }
+.heading {
+	font-size: clamp(2rem, 8vw, 7rem);
+	line-height: 1;
+	max-width: 16ch;
+	margin-right: auto;
+}
 .container {
 	width: 100%;
 	margin-right: auto;
