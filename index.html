@@ -50,6 +50,32 @@
 	<link href="favicons/safari-pinned-tab.svg" rel="mask-icon">
 		<meta content="#bea1a5" name="theme-color">
 		<title>Above the fold is a myth.</title>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZWNPMPJ127"></script>
+		<script>
+			(function () {
+				var measurementId = 'G-ZWNPMPJ127';
+				var gaDebugEnabled = window.location.search.indexOf('ga_debug=1') !== -1;
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){window.dataLayer.push(arguments);}
+				window.gtag = gtag;
+
+				gtag('js', new Date());
+
+				// Disable automatic page_view and send one explicit page_view to avoid silent drops in static-host migrations.
+				gtag('config', measurementId, {
+					send_page_view: false,
+					debug_mode: gaDebugEnabled
+				});
+
+				gtag('event', 'page_view', {
+					page_title: document.title,
+					page_location: window.location.href,
+					page_path: window.location.pathname + window.location.search,
+					debug_mode: gaDebugEnabled
+				});
+			})();
+		</script>
 		<script>
 			(function () {
 				var savedTheme = localStorage.getItem('theme-preference');
@@ -154,13 +180,6 @@
 		</script>
 	
 	<script src="js/ie10-viewport-bug-workaround.js">
-	</script> <!-- analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-WXJ9FJ8M9S"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-WXJ9FJ8M9S');
 	</script>
 </body>
 </html>
